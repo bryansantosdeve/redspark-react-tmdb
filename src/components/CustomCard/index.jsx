@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+import CustomCardDescription from './fragments/CustomCardDescription';
 import {
   CustomCardBackgroundStyled,
   CustomCardDescriptionBackgroundStyled,
@@ -5,22 +7,22 @@ import {
 } from './styles';
 
 /// TODO: Revisar estilização da Figure
-function CustomCard({ imageSrc, title, rated }) {
+function CustomCard({ imageSrc, title, rated, contentId }) {
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate(`/content/${contentId}`);
+  }
+
   return (
     <CustomCardBackgroundStyled>
       <figure>
-        <ImageStyled src={imageSrc} alt={title}></ImageStyled>
+        <a href=' ' onClick={handleClick}>
+          <ImageStyled src={imageSrc} alt={title}></ImageStyled>
+        </a>
       </figure>
       <CustomCardDescriptionBackgroundStyled>
-        <div>
-          <p>{title}</p>
-        </div>
-        <div>
-          <p>{rated}</p>
-        </div>
-        <div>
-          <p>Espaço para implementação futura</p>
-        </div>
+        <CustomCardDescription title={title} rated={rated} />
       </CustomCardDescriptionBackgroundStyled>
     </CustomCardBackgroundStyled>
   );

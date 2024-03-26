@@ -1,8 +1,16 @@
-function CustomFooter() {
+import { DescriptionStyled, FooterStyled, TitleStyled } from './styles';
+
+// TODO: Revisar organização da disposição de título e descrição
+function CustomFooter({ title, description }) {
   return (
-    <footer>
-      <h2>About me</h2>
-    </footer>
+    <FooterStyled>
+      <span>
+        <TitleStyled>{title}</TitleStyled>
+      </span>
+      <div>
+        <DescriptionStyled>{description}</DescriptionStyled>
+      </div>
+    </FooterStyled>
   );
 }
 

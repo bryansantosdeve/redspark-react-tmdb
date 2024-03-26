@@ -7,8 +7,10 @@ export const CustomInputTextStyled = styled.input`
   border-radius: 58px;
   font-size: 1rem;
   font-weight: 300;
+  justify-content: center;
   line-height: 19.36px;
   height: 5.556vh;
+  padding-left: 25px;
   /* Comentario pra ver tamanho da largura */
-  width: 90%;
+  width: 89.7%;
 `;

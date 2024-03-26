@@ -32,7 +32,8 @@ function DiscoverMoviesSection() {
       <Carousel
         contentList={movies}
         settings={carouselSettings}
-        title='Discover a new movie'
+        title='DISCOVER A NEW MOVIE'
+        isMovie={true}
       />
     </>
   );

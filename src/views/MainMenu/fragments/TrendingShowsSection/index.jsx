@@ -32,8 +32,9 @@ function TrendingShowsSection() {
   return (
     <Carousel
       settings={carouselSettings}
-      title='Trending shows'
+      title='TRENDING SHOWS'
       contentList={trendingShows}
+      isMovie={false}
     />
   );
 }
