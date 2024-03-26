@@ -1,7 +1,7 @@
-function CustomHeader() {
+function CustomHeader({ title }) {
   return (
     <header>
-      <h1>Página de Menu Inicial</h1>
+      <h1>{title}</h1>
     </header>
   );
 }
