@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainMenu from './views/MainMenu';
-import DetailedContent from './views/DetailedContent';
+import MovieDetails from './views/MovieDetails';
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' Component={MainMenu} />
-          <Route path='/content/:contentId' Component={DetailedContent} />
+          <Route path='/content/:contentId' Component={MovieDetails} />
         </Routes>
       </BrowserRouter>
     </div>

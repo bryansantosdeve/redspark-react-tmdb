@@ -5,12 +5,11 @@ export const CustomInputTextStyled = styled.input`
   border: 1px;
   border-color: #00b3e5;
   border-radius: 58px;
+  box-sizing: border-box;
   font-size: 1rem;
   font-weight: 300;
-  justify-content: center;
-  line-height: 19.36px;
   height: 5.556vh;
+  line-height: 19.36px;
   padding-left: 25px;
-  /* Comentario pra ver tamanho da largura */
-  width: 89.7%;
+  width: 100%;
 `;

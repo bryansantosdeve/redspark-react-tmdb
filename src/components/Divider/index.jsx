@@ -1,7 +1,7 @@
 import { DividerStyled } from './styles';
 
-function CustomDivider() {
+function Divider() {
   return <DividerStyled />;
 }
 
-export default CustomDivider;
+export default Divider;
