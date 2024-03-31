@@ -1,16 +1,10 @@
 import axios from 'axios';
 
-/// TODO: Implementar constantes de configuração
-const baseUrl = 'https://api.themoviedb.org/';
-const token =
-  'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNDNhNzAzZGRmM2M3ODg4NmZlMzFkMWJiODQzODljMCIsInN1YiI6IjY1ZmRjZjQ1MzUyMGU4MDE2NWQ1YWYwOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.DRjIKVYGW1KbtG8FuP3Arvs6V9Uj7kvVBJukvqjLjiU';
-const authorizationType = 'Bearer';
-
 function getDataTmdb({ endpoint, onSuccess, onError }) {
   return axios
-    .get(baseUrl + endpoint, {
+    .get(`${process.env.REACT_APP_HTTP_BASE_URL_API}${endpoint}`, {
       headers: {
-        Authorization: `${authorizationType} ${token}`,
+        Authorization: `${process.env.REACT_APP_HTTP_AUTHORIZAITON_BEARER} ${process.env.REACT_APP_SECRET_KEY}`,
       },
     })
     .then((success) => onSuccess(success))

@@ -15,3 +15,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  padding: 40px;
+  color: #ffeb3c !important;
+}

@@ -29,13 +29,14 @@ function MainMenu() {
         <CardStyled>
           <ContentCardSection
             isBanner={true}
-            endpoint={'3/movie/popular'}
+            endpoint={'3/trending/movie/week'}
             settings={{
-              spaceBetween: 18,
               slidesPerView: 1,
               centeredSlides: true,
-              loop: true,
-              navigation: true,
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
               pagination: {
                 clickable: true,
               },
@@ -58,18 +59,39 @@ function MainMenu() {
       </SectionStyled>
 
       <SectionStyled>
-        <TitleStyled>
-          <Title>&#9733; UPCOMING MOVIES &#9733;</Title>
-        </TitleStyled>
         <CardStyled>
           <ContentCardSection
             endpoint={'3/movie/upcoming'}
             settings={{
+              spaceBetween: 20,
               slidesPerView: 6.2,
-              loop: true,
               navigation: true,
-              pagination: true,
-              watchOverflow: true,
+              breakpoints: {
+                '@0.10': {
+                  slidesPerView: 1,
+                  spaceBetween: 50,
+                },
+                '@0.50': {
+                  slidesPerView: 1.2,
+                  spaceBetween: 50,
+                },
+                '@0.75': {
+                  slidesPerView: 2.2,
+                  spaceBetween: 50,
+                },
+                '@1.00': {
+                  slidesPerView: 3.2,
+                  spaceBetween: 50,
+                },
+                '@1.50': {
+                  slidesPerView: 4.2,
+                  spaceBetween: 50,
+                },
+                '@2.00': {
+                  slidesPerView: 5.2,
+                  spaceBetween: 50,
+                },
+              },
             }}
             isBanner={false}
           />
@@ -87,8 +109,31 @@ function MainMenu() {
               spaceBetween: 10,
               slidesPerView: 6.2,
               navigation: true,
-              pagination: {
-                clickable: true,
+              breakpoints: {
+                '@0.10': {
+                  slidesPerView: 1,
+                  spaceBetween: 50,
+                },
+                '@0.50': {
+                  slidesPerView: 1.2,
+                  spaceBetween: 50,
+                },
+                '@0.75': {
+                  slidesPerView: 2.2,
+                  spaceBetween: 50,
+                },
+                '@1.00': {
+                  slidesPerView: 3.2,
+                  spaceBetween: 50,
+                },
+                '@1.50': {
+                  slidesPerView: 4.2,
+                  spaceBetween: 50,
+                },
+                '@2.00': {
+                  slidesPerView: 5.2,
+                  spaceBetween: 50,
+                },
               },
             }}
             isBanner={false}
@@ -107,8 +152,31 @@ function MainMenu() {
               spaceBetween: 10,
               slidesPerView: 6.2,
               navigation: true,
-              pagination: {
-                clickable: true,
+              breakpoints: {
+                '@0.10': {
+                  slidesPerView: 1,
+                  spaceBetween: 50,
+                },
+                '@0.50': {
+                  slidesPerView: 1.2,
+                  spaceBetween: 50,
+                },
+                '@0.75': {
+                  slidesPerView: 2.2,
+                  spaceBetween: 50,
+                },
+                '@1.00': {
+                  slidesPerView: 3.2,
+                  spaceBetween: 50,
+                },
+                '@1.50': {
+                  slidesPerView: 4.2,
+                  spaceBetween: 50,
+                },
+                '@2.00': {
+                  slidesPerView: 5.2,
+                  spaceBetween: 50,
+                },
               },
             }}
             isBanner={false}

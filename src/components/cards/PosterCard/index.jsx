@@ -18,7 +18,7 @@ function PosterCard({ contentId, imgSrc, title, rated }) {
       </Figure>
       <DescriptionStyled>
         <Title>{title}</Title>
-        <Rated>Rated: {rated}</Rated>
+        <Rated>Rated: {rated.toFixed(1)}</Rated>
         <p>Estrelas</p>
       </DescriptionStyled>
     </CardStyled>

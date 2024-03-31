@@ -4,7 +4,6 @@ import BannerCard from '../../../../components/cards/BannerCard';
 import PosterCard from '../../../../components/cards/PosterCard';
 import { useEffect, useState } from 'react';
 import getDataTmdb from '../../../../config/http';
-import { FigureStyled } from './styles';
 import { Link } from 'react-router-dom';
 
 function ContentCardSection({ endpoint, settings, isBanner }) {
@@ -30,12 +29,10 @@ function ContentCardSection({ endpoint, settings, isBanner }) {
           <SwiperSlide key={content.id}>
             {isBanner ? (
               <Link to={`/content/${content.id}`}>
-                <FigureStyled>
-                  <BannerCard
-                    imgSrc={imageBaseUrl + content.backdrop_path}
-                    title={content.title}
-                  />
-                </FigureStyled>
+                <BannerCard
+                  imgSrc={imageBaseUrl + content.backdrop_path}
+                  title={content.title}
+                />
               </Link>
             ) : (
               <PosterCard
