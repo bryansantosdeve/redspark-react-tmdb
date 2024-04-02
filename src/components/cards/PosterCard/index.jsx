@@ -6,9 +6,10 @@ import {
   DescriptionStyled,
   Title,
   Rated,
+  Description,
 } from './styles';
 
-function PosterCard({ contentId, imgSrc, title, rated }) {
+function PosterCard({ contentId, imgSrc, title, rated, description }) {
   return (
     <CardStyled>
       <Figure>
@@ -18,8 +19,8 @@ function PosterCard({ contentId, imgSrc, title, rated }) {
       </Figure>
       <DescriptionStyled>
         <Title>{title}</Title>
-        <Rated>Rated: {rated.toFixed(1)}</Rated>
-        <p>Estrelas</p>
+        <Rated>{rated && 'Rated: ' + rated.toFixed(1)}</Rated>
+        <Description> {description || null} </Description>
       </DescriptionStyled>
     </CardStyled>
   );

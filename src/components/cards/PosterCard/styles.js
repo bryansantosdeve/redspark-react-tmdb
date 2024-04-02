@@ -45,3 +45,10 @@ export const Rated = styled.p`
   font-weight: 300;
   line-height: 19.36px;
 `;
+
+export const Description = styled.p`
+  color: #f5f5f5;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 19.36px;
+`;

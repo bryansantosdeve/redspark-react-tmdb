@@ -1,12 +1,12 @@
 import { SwiperSlide } from 'swiper/react';
-import Slider from '../../../../components/Slider';
-import BannerCard from '../../../../components/cards/BannerCard';
-import PosterCard from '../../../../components/cards/PosterCard';
-import { useEffect, useState } from 'react';
-import getDataTmdb from '../../../../config/http';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import getDataTmdb from '../../config/http';
+import Slider from '../Slider';
+import BannerCard from '../cards/BannerCard/index';
+import PosterCard from '../cards/PosterCard/index';
 
-function ContentCardSection({ endpoint, settings, isBanner }) {
+function Carousel({ endpoint, settings, isBanner }) {
   const imageBaseUrl = 'https://image.tmdb.org/t/p/original';
   const [contents, setContent] = useState([]);
 
@@ -49,4 +49,4 @@ function ContentCardSection({ endpoint, settings, isBanner }) {
   );
 }
 
-export default ContentCardSection;
+export default Carousel;

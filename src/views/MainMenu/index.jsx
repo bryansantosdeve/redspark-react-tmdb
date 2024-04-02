@@ -1,8 +1,8 @@
+import Carousel from '../../components/Carousel';
 import Divider from '../../components/Divider';
 import CustomTextInput from '../../components/inputs/CustomTextInput';
 import DefaultFooter from '../../components/surface/DefaultFooter';
 import ButtonGenreSection from './fragments/ButtonGenreSection';
-import ContentCardSection from './fragments/ContentCardSection';
 import {
   ImageStyled,
   SearchFieldStyled,
@@ -27,7 +27,7 @@ function MainMenu() {
 
       <SectionStyled>
         <CardStyled>
-          <ContentCardSection
+          <Carousel
             isBanner={true}
             endpoint={'3/trending/movie/week'}
             settings={{
@@ -60,7 +60,7 @@ function MainMenu() {
 
       <SectionStyled>
         <CardStyled>
-          <ContentCardSection
+          <Carousel
             endpoint={'3/movie/upcoming'}
             settings={{
               spaceBetween: 20,
@@ -103,8 +103,8 @@ function MainMenu() {
           <Title>&#9733; TOP RATED MOVIES &#9733;</Title>
         </TitleStyled>
         <CardStyled>
-          <ContentCardSection
-            endpoint={'3/movie/top_rated'}
+          <Carousel
+            endpoint={'3/movie/upcoming'}
             settings={{
               spaceBetween: 10,
               slidesPerView: 6.2,
@@ -146,7 +146,7 @@ function MainMenu() {
           <Title>&#9733; UPCOMING MOVIES &#9733;</Title>
         </TitleStyled>
         <CardStyled>
-          <ContentCardSection
+          <Carousel
             endpoint={'3/movie/upcoming'}
             settings={{
               spaceBetween: 10,
@@ -188,12 +188,7 @@ function MainMenu() {
         <Divider />
       </DividerStyled>
 
-      <DefaultFooter
-        title={'ABOUT ME'}
-        description={
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-        }
-      />
+      <DefaultFooter />
     </MainMenuStyled>
   );
 }

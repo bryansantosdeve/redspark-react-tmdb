@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Button } from './styles';
 import getDataTmdb from '../../../../config/http';
+import GenreButton from '../../../../components/buttons/GenreButton';
 
 function ButtonGenreSection() {
   const [genres, setGenres] = useState([]);
@@ -20,7 +20,7 @@ function ButtonGenreSection() {
   return (
     <>
       {genres.map((genre) => {
-        return <Button key={genre.id}>{genre.name}</Button>;
+        return <GenreButton key={genre.id} label={genre.name} />;
       })}
     </>
   );
