@@ -8,13 +8,22 @@ import {
   Rated,
   Description,
 } from './styles';
+import ImageNotFound from '../../../assets/images/image-not-found.jpg';
 
-function PosterCard({ contentId, imgSrc, title, rated, description }) {
+function PosterCard({
+  contentId,
+  imgSrc,
+  title,
+  rated,
+  description,
+  endpoint,
+}) {
+  const imageBaseUrl = 'https://image.tmdb.org/t/p/original/';
   return (
-    <CardStyled>
+    <CardStyled key={contentId}>
       <Figure>
-        <Link to={`/content/${contentId}`}>
-          <Image src={imgSrc} />
+        <Link to={endpoint} reloadDocument>
+          <Image src={imgSrc ? imageBaseUrl + imgSrc : ImageNotFound} />
         </Link>
       </Figure>
       <DescriptionStyled>

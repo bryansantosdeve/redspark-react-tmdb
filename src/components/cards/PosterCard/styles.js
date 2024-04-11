@@ -20,7 +20,7 @@ export const Figure = styled.figure`
 export const Image = styled.img`
   border: solid 1px white;
   width: 100%;
-  /* height: 100%; */
+  height: 333px;
 `;
 
 export const DescriptionStyled = styled.div`

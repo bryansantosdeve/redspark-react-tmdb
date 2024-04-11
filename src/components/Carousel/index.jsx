@@ -7,7 +7,6 @@ import BannerCard from '../cards/BannerCard/index';
 import PosterCard from '../cards/PosterCard/index';
 
 function Carousel({ endpoint, settings, isBanner }) {
-  const imageBaseUrl = 'https://image.tmdb.org/t/p/original';
   const [contents, setContent] = useState([]);
 
   useEffect(() => {
@@ -30,16 +29,17 @@ function Carousel({ endpoint, settings, isBanner }) {
             {isBanner ? (
               <Link to={`/content/${content.id}`}>
                 <BannerCard
-                  imgSrc={imageBaseUrl + content.backdrop_path}
+                  imgSrc={content.backdrop_path}
                   title={content.title}
                 />
               </Link>
             ) : (
               <PosterCard
                 contentId={content.id}
-                imgSrc={imageBaseUrl + content.poster_path}
+                imgSrc={content.poster_path}
                 title={content.title}
                 rated={content.vote_average}
+                endpoint={`/content/${content.id}`}
               />
             )}
           </SwiperSlide>

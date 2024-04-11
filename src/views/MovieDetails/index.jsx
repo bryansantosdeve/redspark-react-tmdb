@@ -9,6 +9,7 @@ import {
   ImageStyled,
   MovieDetailsStyled,
   OverviewDescription,
+  SectionGridStyled,
   SectionStyled,
   Title,
   TitleStyled,
@@ -25,10 +26,10 @@ function MovieDetails() {
   const [movie, setMovie] = useState({});
   const [genres, setGenres] = useState([]);
   const endpoint = `3/movie/${contentId}`;
-  const imageBaseUrl = 'https://image.tmdb.org/t/p/original';
+  const noInfo = '-';
   useEffect(() => {
     getDataTmdb({ endpoint, onSuccess, onError });
-  }, []);
+  }, [endpoint]);
 
   const onSuccess = (response) => {
     setMovie(response.data);
@@ -48,9 +49,7 @@ function MovieDetails() {
         />
       </figure>
 
-      {/* Revisar encapsulamento de banner */}
-      <BannerCard imgSrc={imageBaseUrl + movie.backdrop_path} />
-      {/* Revisar encapsulamento de banner */}
+      <BannerCard imgSrc={movie.backdrop_path} />
 
       <SectionStyled>
         <TitleStyled>
@@ -63,12 +62,12 @@ function MovieDetails() {
         </ButtonStyled>
       </SectionStyled>
 
-      <SectionStyled>
+      <SectionGridStyled>
         <TitleStyled>
           <Title>OVERVIEW</Title>
         </TitleStyled>
         <div>
-          <OverviewDescription>{movie.overview}</OverviewDescription>
+          <OverviewDescription>{movie.overview || noInfo}</OverviewDescription>
         </div>
         <GridStyled>
           <div>
@@ -76,7 +75,7 @@ function MovieDetails() {
               <Title>RELEASE DATE</Title>
             </TitleStyled>
             <div>
-              <Caption>{movie.release_date}</Caption>
+              <Caption>{movie.release_date || noInfo}</Caption>
             </div>
           </div>
           <div>
@@ -84,7 +83,7 @@ function MovieDetails() {
               <Title>RUN TIME</Title>
             </TitleStyled>
             <div>
-              <Caption>{movie.runtime}</Caption>
+              <Caption>{movie.runtime} minutes</Caption>
             </div>
           </div>
           <div>
@@ -92,7 +91,7 @@ function MovieDetails() {
               <Title>BUDGET</Title>
             </TitleStyled>
             <div>
-              <Caption>{movie.budget}</Caption>
+              <Caption>{movie.budget || noInfo}</Caption>
             </div>
           </div>
           <div>
@@ -100,11 +99,11 @@ function MovieDetails() {
               <Title>HOMEPAGE</Title>
             </TitleStyled>
             <div>
-              <Caption>{movie.homepage}</Caption>
+              <Caption>{movie.homepage || noInfo}</Caption>
             </div>
           </div>
         </GridStyled>
-      </SectionStyled>
+      </SectionGridStyled>
 
       <SectionStyled>
         <TitleStyled>
@@ -115,31 +114,27 @@ function MovieDetails() {
             contentId={contentId}
             settings={{
               spaceBetween: 20,
-              slidesPerView: 6.2,
               navigation: true,
+              slidesPerView: 5.2,
               breakpoints: {
-                '@0.10': {
+                320: {
                   slidesPerView: 1,
                   spaceBetween: 50,
                 },
-                '@0.50': {
+                480: {
                   slidesPerView: 1.2,
                   spaceBetween: 50,
                 },
-                '@0.75': {
+                640: {
                   slidesPerView: 2.2,
                   spaceBetween: 50,
                 },
-                '@1.00': {
+                800: {
                   slidesPerView: 3.2,
                   spaceBetween: 50,
                 },
-                '@1.50': {
+                960: {
                   slidesPerView: 4.2,
-                  spaceBetween: 50,
-                },
-                '@2.00': {
-                  slidesPerView: 5.2,
                   spaceBetween: 50,
                 },
               },
@@ -160,31 +155,27 @@ function MovieDetails() {
             isBanner={false}
             settings={{
               spaceBetween: 20,
-              slidesPerView: 6.2,
               navigation: true,
+              slidesPerView: 5.2,
               breakpoints: {
-                '@0.10': {
+                320: {
                   slidesPerView: 1,
                   spaceBetween: 50,
                 },
-                '@0.50': {
+                480: {
                   slidesPerView: 1.2,
                   spaceBetween: 50,
                 },
-                '@0.75': {
+                640: {
                   slidesPerView: 2.2,
                   spaceBetween: 50,
                 },
-                '@1.00': {
+                800: {
                   slidesPerView: 3.2,
                   spaceBetween: 50,
                 },
-                '@1.50': {
+                960: {
                   slidesPerView: 4.2,
-                  spaceBetween: 50,
-                },
-                '@2.00': {
-                  slidesPerView: 5.2,
                   spaceBetween: 50,
                 },
               },

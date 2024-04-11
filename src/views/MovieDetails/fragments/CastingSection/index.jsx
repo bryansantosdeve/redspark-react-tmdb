@@ -7,11 +7,10 @@ import PosterCard from '../../../../components/cards/PosterCard';
 function CastingSection({ contentId, settings }) {
   const [casting, setCasting] = useState([]);
   const endpoint = `3/movie/${contentId}/credits`;
-  const imageBaseUrl = 'https://image.tmdb.org/t/p/original/';
 
   useEffect(() => {
     getDataTmdb({ endpoint, onSuccess, onError });
-  }, []);
+  }, [endpoint]);
 
   const onSuccess = (response) => {
     setCasting(response.data.cast);
@@ -25,10 +24,9 @@ function CastingSection({ contentId, settings }) {
     <Slider settings={settings}>
       {casting.map((person) => {
         return (
-          <SwiperSlide>
+          <SwiperSlide key={person.id}>
             <PosterCard
-              key={person.id}
-              imgSrc={imageBaseUrl + person.profile_path}
+              imgSrc={person.profile_path}
               title={person.original_name}
               description={person.character}
             />

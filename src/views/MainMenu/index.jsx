@@ -64,7 +64,7 @@ function MainMenu() {
             endpoint={'3/movie/upcoming'}
             settings={{
               spaceBetween: 20,
-              slidesPerView: 6.2,
+              slidesPerView: 5.2,
               navigation: true,
               breakpoints: {
                 '@0.10': {

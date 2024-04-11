@@ -17,17 +17,23 @@ export const ImageStyled = styled.img`
   height: 1.889vh;
 `;
 
-export const GridStyled = styled.div`
-  display: grid;
-  grid-auto-flow: column;
-  box-sizing: border-box;
+export const SectionGridStyled = styled.section`
   text-align: start;
-  grid-column-gap: 50px;
-  grid-template-columns: repeat(autofit, minmax(186px, 1fr));
+  width: 100%;
+  box-sizing: border-box;
 `;
 
+export const GridStyled = styled.div`
+  display: grid;
+  box-sizing: border-box;
+  text-align: start;
+  word-wrap: break-word;
+  gap: 20px;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(190px, auto));
+`;
 export const SectionStyled = styled.section`
-  display: block;
+  display: flex;
   align-items: start;
   box-sizing: border-box;
   display: flex;
