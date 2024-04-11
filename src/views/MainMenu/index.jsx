@@ -29,7 +29,7 @@ function MainMenu() {
         <CardStyled>
           <Carousel
             isBanner={true}
-            endpoint={'3/trending/movie/week'}
+            endpoint={'/trending/movie/week'}
             settings={{
               slidesPerView: 1,
               centeredSlides: true,
@@ -61,34 +61,30 @@ function MainMenu() {
       <SectionStyled>
         <CardStyled>
           <Carousel
-            endpoint={'3/movie/upcoming'}
+            endpoint={'/movie/popular'}
             settings={{
               spaceBetween: 20,
-              slidesPerView: 5.2,
               navigation: true,
+              slidesPerView: 5.2,
               breakpoints: {
-                '@0.10': {
+                320: {
                   slidesPerView: 1,
                   spaceBetween: 50,
                 },
-                '@0.50': {
+                480: {
                   slidesPerView: 1.2,
                   spaceBetween: 50,
                 },
-                '@0.75': {
+                640: {
                   slidesPerView: 2.2,
                   spaceBetween: 50,
                 },
-                '@1.00': {
+                800: {
                   slidesPerView: 3.2,
                   spaceBetween: 50,
                 },
-                '@1.50': {
+                960: {
                   slidesPerView: 4.2,
-                  spaceBetween: 50,
-                },
-                '@2.00': {
-                  slidesPerView: 5.2,
                   spaceBetween: 50,
                 },
               },
@@ -104,34 +100,30 @@ function MainMenu() {
         </TitleStyled>
         <CardStyled>
           <Carousel
-            endpoint={'3/movie/upcoming'}
+            endpoint={'/movie/top_rated'}
             settings={{
               spaceBetween: 10,
-              slidesPerView: 6.2,
               navigation: true,
+              slidesPerView: 5.2,
               breakpoints: {
-                '@0.10': {
+                320: {
                   slidesPerView: 1,
                   spaceBetween: 50,
                 },
-                '@0.50': {
+                480: {
                   slidesPerView: 1.2,
                   spaceBetween: 50,
                 },
-                '@0.75': {
+                640: {
                   slidesPerView: 2.2,
                   spaceBetween: 50,
                 },
-                '@1.00': {
+                800: {
                   slidesPerView: 3.2,
                   spaceBetween: 50,
                 },
-                '@1.50': {
+                960: {
                   slidesPerView: 4.2,
-                  spaceBetween: 50,
-                },
-                '@2.00': {
-                  slidesPerView: 5.2,
                   spaceBetween: 50,
                 },
               },
@@ -147,34 +139,30 @@ function MainMenu() {
         </TitleStyled>
         <CardStyled>
           <Carousel
-            endpoint={'3/movie/upcoming'}
+            endpoint={'/movie/upcoming'}
             settings={{
               spaceBetween: 10,
-              slidesPerView: 6.2,
               navigation: true,
+              slidesPerView: 5.2,
               breakpoints: {
-                '@0.10': {
+                320: {
                   slidesPerView: 1,
                   spaceBetween: 50,
                 },
-                '@0.50': {
+                480: {
                   slidesPerView: 1.2,
                   spaceBetween: 50,
                 },
-                '@0.75': {
+                640: {
                   slidesPerView: 2.2,
                   spaceBetween: 50,
                 },
-                '@1.00': {
+                800: {
                   slidesPerView: 3.2,
                   spaceBetween: 50,
                 },
-                '@1.50': {
+                960: {
                   slidesPerView: 4.2,
-                  spaceBetween: 50,
-                },
-                '@2.00': {
-                  slidesPerView: 5.2,
                   spaceBetween: 50,
                 },
               },

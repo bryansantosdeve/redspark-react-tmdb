@@ -6,15 +6,21 @@ View the raw content of this file to understand the format.
 
 ## To-do
 
-- [ ] Update endpoints to TMDB API on [MainMenu page](/src/views/MainMenu/index.jsx)
+- [ ] Implement filter by button when clicked by genre on [MainMenu page](/src/views/MainMenu/index.jsx)
 - [ ] Review semantic HTML structure on pages
-- [ ] Refactor class while calling API endpoints on [http class](/src/config/http.jsx)
 - [ ] Implement new page for people showed on [MovieDetails page](/src/views/MovieDetails/index.jsx)
+- [ ] Create new page for unexisted url and API calls for 404 (Not found)
+- [ ] First deploy using Vercel
 - [ ] Create a reference to use on breakpoints for Swiper Carousel code in order to avoid repetitions throughout the code
 
 ### In Progress
 
 ### Done ✓
+
+- [x] Refactor class while calling API endpoints on [http class](/src/config/http.jsx)
+- [x] Update endpoints to TMDB API on [MainMenu page](/src/views/MainMenu/index.jsx)
+
+---
 
 - [x] Create a responsiveness grid layout on [MovieDetails page](/src/views/MovieDetails/index.jsx)
 - [x] Refactor image logic from API to PosterCard url

@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import getDataTmdb from '../../../../config/http';
+import { getDataTmdb } from '../../../../config/http';
 import GenreButton from '../../../../components/buttons/GenreButton';
 
 function ButtonGenreSection() {
   const [genres, setGenres] = useState([]);
-  const endpoint = '3/genre/movie/list';
+  const endpoint = '/genre/movie/list';
   useEffect(() => {
     getDataTmdb({ endpoint, onSuccess, onError });
   }, []);

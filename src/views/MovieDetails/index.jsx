@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import getDataTmdb from '../../config/http';
+import { getDataTmdb } from '../../config/http';
 import {
   ButtonStyled,
   Caption,
@@ -25,7 +25,7 @@ function MovieDetails() {
   const { contentId } = useParams();
   const [movie, setMovie] = useState({});
   const [genres, setGenres] = useState([]);
-  const endpoint = `3/movie/${contentId}`;
+  const endpoint = `/movie/${contentId}`;
   const noInfo = '-';
   useEffect(() => {
     getDataTmdb({ endpoint, onSuccess, onError });
@@ -151,7 +151,7 @@ function MovieDetails() {
       <SectionStyled>
         <CardStyled>
           <Carousel
-            endpoint={`3/movie/${contentId}/similar`}
+            endpoint={`/movie/${contentId}/similar`}
             isBanner={false}
             settings={{
               spaceBetween: 20,

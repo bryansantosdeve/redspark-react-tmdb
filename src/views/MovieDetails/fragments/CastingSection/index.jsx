@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import Slider from '../../../../components/Slider';
-import getDataTmdb from '../../../../config/http';
+import { getDataTmdb } from '../../../../config/http';
 import { SwiperSlide } from 'swiper/react';
 import PosterCard from '../../../../components/cards/PosterCard';
 
 function CastingSection({ contentId, settings }) {
   const [casting, setCasting] = useState([]);
-  const endpoint = `3/movie/${contentId}/credits`;
+  const endpoint = `/movie/${contentId}/credits`;
 
   useEffect(() => {
     getDataTmdb({ endpoint, onSuccess, onError });

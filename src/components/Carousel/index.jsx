@@ -1,7 +1,7 @@
 import { SwiperSlide } from 'swiper/react';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import getDataTmdb from '../../config/http';
+import { getDataTmdb } from '../../config/http';
 import Slider from '../Slider';
 import BannerCard from '../cards/BannerCard/index';
 import PosterCard from '../cards/PosterCard/index';

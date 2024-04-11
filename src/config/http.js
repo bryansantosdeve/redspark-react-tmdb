@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-function getDataTmdb({ endpoint, onSuccess, onError }) {
+export async function getDataTmdb({ endpoint, onSuccess, onError }) {
   return axios
     .get(`${process.env.REACT_APP_HTTP_BASE_URL_API}${endpoint}`, {
       headers: {
@@ -10,5 +10,3 @@ function getDataTmdb({ endpoint, onSuccess, onError }) {
     .then((success) => onSuccess(success))
     .catch((error) => onError(error));
 }
-
-export default getDataTmdb;
