@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# bryansantosdeve's React TMDB
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This webapp was created in order to practice some ReactJS and Web Development concepts during its progress. The main objective is to integrate this application to TMDB's API and provide the most optimized experience to any user.
 
-## Available Scripts
+## Content
 
-In the project directory, you can run:
+- [Demo](#demo)
+- [Website](#website)
+  - [Landing Page](#landing-page)
+  - [Details Page](#details-page)
+- [Usage](#usage)
+  - [Clone repo](#clone-repo)
+  - [Bug/Feature Request](#bug--feature-request)
+- [Built With](#built-with)
+- [To-Do](#to-do)
+- [License](#license)
 
-### `npm start`
+## Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Here is a working live demo : [https://bryansantosdeve-react-tmdb.vercel.app/](https://bryansantosdeve-react-tmdb.vercel.app/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Website
 
-### `npm test`
+### Landing Page
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Currently this page is under improvement. It is possible to see more [here](/TODO.md).
 
-### `npm run build`
+![](/src/assets/demos/demo_landing_page.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Details Page
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![](/src/assets/demos/demo_detail_page.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+### Clone repo
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Run the following code on bash in order to clone the project.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/your_username_/redspark-react-tmdb.git
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Run the following code on the folder's terminal to import all dependencies.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm install
+```
 
-## Learn More
+3. Start the project
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Any questions, [check out the react standard README.md](https://github.com/facebook/create-react-app)
 
-### Code Splitting
+### Bug / Feature Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+If you find a bug (the website couldn't handle the query and / or gave undesired results) or even if you'd like to request a new function, kindly open an issue [here](https://github.com/bryansantosdeve/redspark-react-tmdb/issues/new) by including your search query and the expected result.
 
-### Analyzing the Bundle Size
+## Built with
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- [ReactJS](https://react.dev/learn) - ReactJS is a free and open-source front-end Javascript library for building user interfaces based on components.
+- [TMDB API](https://developer.themoviedb.org/docs/getting-started) - The API service is for those of you interested in using our movie, TV show or actor images and/or data in your application. Our API is a system we provide for you and your team to programmatically fetch and use our data and/or images.
 
-### Making a Progressive Web App
+## [To-do](/TODO.md)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## [License](https://github.com/iharsh234/WebApp/blob/master/LICENSE.md)
